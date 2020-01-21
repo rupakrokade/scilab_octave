@@ -10,12 +10,12 @@ function scilab_toolboxlib = startModule()
 
   mprintf("Start " + TOOLBOX_TITLE + "\n");
 
-  if isdef("scilab_toolboxlib") then
-    warning("scilab_toolbox library is already loaded");
+  if isdef("scilab_octavelib") then
+    warning("scilab_octave library is already loaded");
     return;
   end
 
-  etc_tlbx  = get_absolute_file_path("scilab_toolbox.start");
+  etc_tlbx  = get_absolute_file_path("scilab_octave.start");
   etc_tlbx  = getshortpathname(etc_tlbx);
   root_tlbx = strncpy( etc_tlbx, length(etc_tlbx)-length("\etc\") );
 
